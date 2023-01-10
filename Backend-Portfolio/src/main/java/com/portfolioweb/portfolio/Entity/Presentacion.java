@@ -28,5 +28,4 @@ public class Presentacion {
     @NotNull    
     private String Url_Banner;
     
-    
 }

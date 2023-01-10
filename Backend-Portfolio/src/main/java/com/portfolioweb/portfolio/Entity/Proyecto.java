@@ -27,5 +27,17 @@ public class Proyecto {
     private String Url;
     
     
+    public void Proyecto(){
+        
+    }
+    
+    public void Proyecto(Long id, String titulo, 
+            String descr, String url){
+        
+        this.Id = id;
+        this.Titulo = titulo;
+        this.Descripcion = descr;
+        this.Url = url;
+    }
     
 }

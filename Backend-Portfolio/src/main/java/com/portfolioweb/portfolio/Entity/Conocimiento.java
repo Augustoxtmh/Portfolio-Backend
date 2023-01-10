@@ -18,14 +18,20 @@ public class Conocimiento {
     private Long Id;
     
     @NotNull
-    private String Titulo;
+    private String conocimiento;
     
-    @NotNull    
-    private String Descripcion;
+    @NotNull
+    private int porcentaje;
+
+    public void Conocimiento(){
+        
+    }
     
-    @NotNull    
-    private String Url;
-    
-    
-    
+    public void Conocimiento(Long id, String conocimiento, 
+            int porcentaje){
+        
+        this.Id = id;
+        this.conocimiento = conocimiento;
+        this.porcentaje = porcentaje;
+    }
 }

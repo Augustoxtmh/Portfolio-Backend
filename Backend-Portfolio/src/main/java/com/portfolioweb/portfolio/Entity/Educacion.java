@@ -26,6 +26,17 @@ public class Educacion {
     @NotNull    
     private String Url;
     
+    public void Educacion(){
+        
+    }
     
+    public void Educacion(Long id, String titulo, 
+            String descr, String url){
+        
+        this.Id = id;
+        this.Titulo = titulo;
+        this.Descripcion = descr;
+        this.Url = url;
+    }
     
 }

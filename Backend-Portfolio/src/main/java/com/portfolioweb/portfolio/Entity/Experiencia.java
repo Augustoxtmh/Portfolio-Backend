@@ -25,4 +25,17 @@ public class Experiencia {
     @NotNull    
     private String Url;
     
+    public void Experiencia(){
+        
+    }
+    
+    public void Experiencia(Long id, String titulo, 
+            String descr, String url){
+        
+        this.Id = id;
+        this.Titulo = titulo;
+        this.Descripcion = descr;
+        this.Url = url;
+    }
+    
 }
