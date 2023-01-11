@@ -8,6 +8,8 @@ public interface IExperienciaService {
     
     public List<Experiencia> getExperiencia();
     
+    public void createExperiencia (Experiencia exp);
+    
     public void updateExperiencia(Experiencia exp);
     
     public void deleteExperiencia(Long Id);

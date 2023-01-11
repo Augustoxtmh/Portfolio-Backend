@@ -21,6 +21,12 @@ public class ExperienciaService implements IExperienciaService {
     }
 
     @Override
+    public void createExperiencia(Experiencia exp) {
+        
+        conoRepo.save(exp);
+    }
+    
+    @Override
     public void updateExperiencia(Experiencia exp) {
         
         conoRepo.save(exp);

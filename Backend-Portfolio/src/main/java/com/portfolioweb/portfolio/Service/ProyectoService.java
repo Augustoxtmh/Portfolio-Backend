@@ -21,6 +21,12 @@ public class ProyectoService implements IProyectoService {
     }
 
     @Override
+    public void createProyecto(Proyecto proy) {
+        
+        conoRepo.save(proy);
+    }
+    
+    @Override
     public void updateProyecto(Proyecto proy) {
         
         conoRepo.save(proy);

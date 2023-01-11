@@ -7,34 +7,43 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController
+@CrossOrigin (origins = "http://localhost:4200")
 public class EducacionController {
     
     @Autowired
-    private IEducacionService conoServ;
+    private IEducacionService EduServ;
     
     @GetMapping ("/Educacion")
     @ResponseBody
     public List<Educacion> getEducacion(){
         
-        return conoServ.getEducacion();
+        return EduServ.getEducacion();
     }
 
-    @PostMapping ("/Crear/Educacion")
-    public void updateEducacion(@RequestBody Educacion cono){
+    @PostMapping ("/Educacion/Crear")
+    public void createEducacion(@RequestBody Educacion Edu){
         
-        conoServ.updateEducacion(cono);        
+        EduServ.createEducacion(Edu);        
     }
     
-    @DeleteMapping("/Borrar/Educacion/{id}")
+    @PutMapping ("/Educacion/Actualizar")
+    public void updateEducacion(@RequestBody Educacion Edu){
+        
+        EduServ.updateEducacion(Edu);        
+    }
+    
+    @DeleteMapping("/Educacion/Borrar/{id}")
     public void deleteEducacion(@PathVariable Long id){
         
-        conoServ.deleteEducacion(id);
+        EduServ.deleteEducacion(id);
     }
 }

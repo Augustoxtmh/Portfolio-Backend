@@ -8,6 +8,8 @@ public interface IEducacionService {
     
     public List<Educacion> getEducacion();
     
+    public void createEducacion(Educacion edu);
+    
     public void updateEducacion(Educacion edu);
     
     public void deleteEducacion(Long Id);

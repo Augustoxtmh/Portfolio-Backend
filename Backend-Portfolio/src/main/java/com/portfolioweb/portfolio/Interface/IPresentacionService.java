@@ -1,12 +1,13 @@
 package com.portfolioweb.portfolio.Interface;
 
 import com.portfolioweb.portfolio.Entity.Presentacion;
+import java.util.List;
 
 
 public interface IPresentacionService {
     
     
-    public Presentacion getPresentacion(Long id);
+    public List <Presentacion> getPresentacion();
     
-    public void updatePresentacion(Long id, String nombre, String apellido, String Url_img, String Url_banner);
+    public void updatePresentacion(String nombre, String descripcion, String Url_img, String Url_banner);
 }

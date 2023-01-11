@@ -27,6 +27,12 @@ public class ConocimientoService implements IConocimientoService {
     }
 
     @Override
+    public void createConocimiento(Conocimiento cono) {
+        
+        conoRepo.save(cono);
+    }
+
+    @Override
     public void deleteConocimiento(Long id) {
         
         conoRepo.deleteById(id);

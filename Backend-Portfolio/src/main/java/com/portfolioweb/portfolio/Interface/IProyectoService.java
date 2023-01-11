@@ -8,6 +8,8 @@ public interface IProyectoService {
     
     public List<Proyecto> getProyecto();
     
+    public void createProyecto(Proyecto proy);
+    
     public void updateProyecto(Proyecto proy);
     
     public void deleteProyecto(Long Id);
