@@ -22,7 +22,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,7 +29,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
-@CrossOrigin
 public class AuthController {
     
     @Autowired
@@ -65,7 +63,7 @@ public class AuthController {
 
         Set<Rol> roles = new HashSet<>();
         roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
-        if (nuevoUsuario.getRoles().contains("admin"))
+        if (nuevoUsuario.getRoles().contains("ADMIN"))
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
         
         usuario.setRoles(roles);
