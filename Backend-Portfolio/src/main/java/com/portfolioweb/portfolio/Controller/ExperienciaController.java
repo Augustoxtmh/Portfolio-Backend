@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -28,19 +29,23 @@ public class ExperienciaController {
         
         return expServ.getExperiencia();
     }
-
+    
+    
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping ("/Experiencia/Crear")
     public void createExperiencia(@RequestBody Experiencia exp){
         
         expServ.createExperiencia(exp);        
     }
-    
+ 
+    @PreAuthorize("hasRole('ADMIN')")
     @PutMapping ("/Experiencia/Actualizar")
     public void updateExperiencia(@RequestBody Experiencia exp){
         
         expServ.updateExperiencia(exp);        
     }
-    
+
+    @PreAuthorize("hasRole('ADMIN')")    
     @DeleteMapping("/Experiencia/Borrar/{id}")
     public void deleteExperiencia(@PathVariable Long id){
         

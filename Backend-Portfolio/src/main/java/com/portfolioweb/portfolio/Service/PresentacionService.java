@@ -20,13 +20,13 @@ public class PresentacionService implements IPresentacionService{
 
     @Override
     public void updatePresentacion(String nombre, 
-            String descripcion, String Url_img, String Url_banner) {
+            String descripcion, String Url_banner) {
         
         Presentacion n_present = getPresentacion().get(0);
         n_present.setNombre(nombre);
         n_present.setDescripcion(descripcion);
         n_present.setUrl_Banner(Url_banner);
-        n_present.setUrl_Img(Url_img);
+
         preseRepo.save(n_present);
     }
 }

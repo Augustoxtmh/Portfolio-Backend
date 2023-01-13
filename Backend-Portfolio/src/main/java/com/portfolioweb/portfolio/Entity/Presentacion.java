@@ -18,9 +18,6 @@ public class Presentacion {
     private String descripcion;
     
     @NotNull    
-    private String Url_Img;
-    
-    @NotNull    
     private String Url_Banner;
     
 }
