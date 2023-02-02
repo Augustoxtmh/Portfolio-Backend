@@ -23,6 +23,9 @@ public class Educacion {
     @NotNull    
     private String Descripcion;
     
+    @NotNull
+    private String Fecha;
+    
     @NotNull    
     private String Url;
     
@@ -31,11 +34,12 @@ public class Educacion {
     }
     
     public void Educacion(Long id, String titulo, 
-            String descr, String url){
+            String descr, String fecha, String url){
         
         this.Id = id;
         this.Titulo = titulo;
         this.Descripcion = descr;
+        this.Fecha = fecha;
         this.Url = url;
     }
     

@@ -23,17 +23,21 @@ public class Experiencia {
     private String Descripcion;
     
     @NotNull    
+    private String Fecha;
+    
+    @NotNull    
     private String Url;
     
     public void Experiencia(){
         
     }
     
-    public void Experiencia(Long id, String titulo, 
-            String descr, String url){
+    public void Experiencia(Long id, String titulo,
+            String fecha, String descr, String url){
         
         this.Id = id;
         this.Titulo = titulo;
+        this.Fecha = fecha;
         this.Descripcion = descr;
         this.Url = url;
     }
